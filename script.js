@@ -214,6 +214,7 @@ function jogar() {
 	document.getElementById("btnJogar").disabled = true;
 	var atributoSelecionado = obtemAtributoSelecionado();
 	var elementoResultado = document.getElementById("resultado");
+	var heightPage = document.body.scrollHeight;
 
 	var valorBandaJogador = bandaJogador.atributos[atributoSelecionado];
 	var valorBandaMaquina = bandaMaquina.atributos[atributoSelecionado];
@@ -227,6 +228,7 @@ function jogar() {
 		document.getElementById("msgFinal").style.marginTop = "20px";
 		document.getElementById("msgFinal").style.fontSize = "1rem";
 		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
+		window.scrollTo(0 , heightPage);
 	} else if (valorBandaJogador < valorBandaMaquina) {
 		somErro.play();
 		elementoResultado.innerHTML = "<p>Você perdeu :(</p>" + textoElemento;
@@ -234,6 +236,7 @@ function jogar() {
 		document.getElementById("msgFinal").style.marginTop = "20px";
 		document.getElementById("msgFinal").style.fontSize = "1rem";
 		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
+		window.scrollTo(0 , heightPage);
 	} else {
 		somErro.play();
 		elementoResultado.innerHTML = "<p>Empatou!!</p>" + textoElemento;
@@ -241,5 +244,6 @@ function jogar() {
 		document.getElementById("msgFinal").style.marginTop = "20px";
 		document.getElementById("msgFinal").style.fontSize = "1rem";
 		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
+		window.scrollTo(0 , heightPage);
 	}
 }

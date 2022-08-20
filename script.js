@@ -39,7 +39,7 @@ var banda2 = new banda(
 	7, //peso
 	5, //técnica
 	8, //velocidade
-	9 //relevancia
+	8 //relevancia
 );
 
 var banda3 = new banda(
@@ -104,6 +104,7 @@ var bandaJogador;
 var somRoleta = document.getElementById("somRoleta");
 var somVitoria = document.getElementById("somVitoria");
 var somErro = document.getElementById("somErro");
+var somEmpate = document.getElementById("somEmpate");
 
 function sortearBanda() {
 	somRoleta.play();
@@ -238,7 +239,7 @@ function jogar() {
 		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
 		window.scrollTo(0 , heightPage);
 	} else {
-		somErro.play();
+		somEmpate.play();
 		elementoResultado.innerHTML = "<p>Empatou!!</p>" + textoElemento;
 		document.getElementById("msgFinal").style.display = "block";
 		document.getElementById("msgFinal").style.marginTop = "20px";

@@ -85,6 +85,7 @@ button {
 }
 
 .atributos label {
+	display: contents;
 	padding: 0px;
 	margin: 0px;
 }

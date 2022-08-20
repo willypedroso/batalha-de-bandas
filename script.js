@@ -4,7 +4,17 @@ class banda {
 	constructor(nome, imagem, peso, tecnica, velocidade, relevancia) {
 		this.nome = nome;
 		this.imagem = imagem;
-		this.carta = `<div class="carta"><p class="nome">${nome}</p><img src="${imagem}"><div class="atributos"><input type="radio" name="atributo" value="peso" checked=""> peso: ${peso}<br><input type="radio" name="atributo" value="tecnica" checked=""> tecnica: ${tecnica}<br><input type="radio" name="atributo" value="velocidade" checked=""> velocidade: ${velocidade}<br><input type="radio" name="atributo" value="relevancia" checked=""> relevancia: ${relevancia}<br></div></div>`;
+		this.carta = 
+		
+		`<div class="carta">
+			<p class="nome">${nome}</p>
+			<img src="${imagem}">
+		 <div class="atributos">
+		 	<input type="radio" name="atributo" value="peso" checked=""> peso: ${peso}<br>
+			<input type="radio" name="atributo" value="tecnica" checked=""> tecnica: ${tecnica}<br>
+			<input type="radio" name="atributo" value="velocidade" checked=""> velocidade: ${velocidade}<br>
+			<input type="radio" name="atributo" value="relevancia" checked=""> relevancia: ${relevancia}<br></div></div>`;
+		
 		this.atributos = {
 			peso: peso,
 			tecnica: tecnica,
@@ -99,6 +109,8 @@ function sortearBanda() {
 	somRoleta.play();
 	document.getElementById("opcoes").innerHTML = "";
 	document.getElementById("resultado").innerHTML = "";
+	document.getElementById("orientacao").style.display = "none";
+	document.getElementById("msgFinal").style.display = "none";
 	var numeroBandaMaquina = parseInt(Math.random() * bandas.length);
 	var numeroBandaJogador = parseInt(Math.random() * bandas.length);
 	
@@ -211,11 +223,23 @@ function jogar() {
 	if (valorBandaJogador > valorBandaMaquina) {
 		somVitoria.play();
 		elementoResultado.innerHTML = "<p>Você venceu!!</p>" + textoElemento;
+		document.getElementById("msgFinal").style.display = "block";
+		document.getElementById("msgFinal").style.marginTop = "20px";
+		document.getElementById("msgFinal").style.fontSize = "1rem";
+		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
 	} else if (valorBandaJogador < valorBandaMaquina) {
 		somErro.play();
 		elementoResultado.innerHTML = "<p>Você perdeu :(</p>" + textoElemento;
+		document.getElementById("msgFinal").style.display = "block";
+		document.getElementById("msgFinal").style.marginTop = "20px";
+		document.getElementById("msgFinal").style.fontSize = "1rem";
+		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
 	} else {
 		somErro.play();
 		elementoResultado.innerHTML = "<p>Empatou!!</p>" + textoElemento;
+		document.getElementById("msgFinal").style.display = "block";
+		document.getElementById("msgFinal").style.marginTop = "20px";
+		document.getElementById("msgFinal").style.fontSize = "1rem";
+		document.getElementById("msgFinal").style.textShadow = "2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000";
 	}
 }

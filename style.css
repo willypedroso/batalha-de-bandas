@@ -84,6 +84,11 @@ button {
 	padding: 13px;
 }
 
+.atributos label {
+	padding: 0px;
+	margin: 0px;
+}
+
 #orientacao {
 	display: none;
 }
@@ -110,6 +115,10 @@ button {
 	transform: translateY(-85px);
 	font-size: 25px;
 	padding: 5px;
+}
+
+#msgFinal {
+	display: none;
 }
 
 @media (max-width: 600px) {

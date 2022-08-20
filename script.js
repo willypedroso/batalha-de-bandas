@@ -4,7 +4,7 @@ class banda {
 	constructor(nome, imagem, peso, tecnica, velocidade, relevancia) {
 		this.nome = nome;
 		this.imagem = imagem;
-		this.carta = `<div class="carta"><p class="nome">${nome}</p><img src="${imagem}"><div class="atributos"><input type="radio" name="atributo" value="peso" checked=""> peso: ${peso}<br><input type="radio" name="atributo" value="tecnica" checked=""> tecnica: ${tecnica}<br><input type="radio" name="atributo" value="velocidade" checked=""> velocidade: ${velocidade}<br></div></div>`;
+		this.carta = `<div class="carta"><p class="nome">${nome}</p><img src="${imagem}"><div class="atributos"><input type="radio" name="atributo" value="peso" checked=""> peso: ${peso}<br><input type="radio" name="atributo" value="tecnica" checked=""> tecnica: ${tecnica}<br><input type="radio" name="atributo" value="velocidade" checked=""> velocidade: ${velocidade}<br><input type="radio" name="atributo" value="relevancia" checked=""> relevancia: ${relevancia}<br></div></div>`;
 		this.atributos = {
 			peso: peso,
 			tecnica: tecnica,

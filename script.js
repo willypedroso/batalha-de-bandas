@@ -1,14 +1,15 @@
 // Declaração de bandas
 
 class banda {
-	constructor(nome, imagem, peso, tecnica, velocidade) {
+	constructor(nome, imagem, peso, tecnica, velocidade, relevancia) {
 		this.nome = nome;
 		this.imagem = imagem;
 		this.carta = `<div class="carta"><p class="nome">${nome}</p><img src="${imagem}"><div class="atributos"><input type="radio" name="atributo" value="peso" checked=""> peso: ${peso}<br><input type="radio" name="atributo" value="tecnica" checked=""> tecnica: ${tecnica}<br><input type="radio" name="atributo" value="velocidade" checked=""> velocidade: ${velocidade}<br></div></div>`;
 		this.atributos = {
 			peso: peso,
 			tecnica: tecnica,
-			velocidade: velocidade
+			velocidade: velocidade,
+			relevancia: relevancia
 		};
 	}
 }
@@ -16,50 +17,74 @@ class banda {
 var banda1 = new banda(
 	"Sepultura",
 	"imagens/sepultura.jpg",
-	8,
-	6,
-	6
+	8, //peso
+	6, //técnica
+	6, //velocidade
+	10 //relevancia
 );
 
 var banda2 = new banda(
 	"Ratos de Porão",
 	"imagens/ratos-de-porao.jpg",
-	7,
-	5,
-	8
+	7, //peso
+	5, //técnica
+	8, //velocidade
+	9 //relevancia
 );
 
 var banda3 = new banda(
 	"Korzus",
 	"imagens/korzus.jpg",
-	8,
-	7,
-	7
+	8, //peso
+	7, //técnica
+	7, //velocidade
+	7 //relevancia
 );
 
 var banda4 = new banda(
 	"Krisiun",
 	"imagens/krisiun.jpg",
-	10,
-	8,
-	9
+	10, //peso
+	8, //técnica
+	9, //velocidade
+	8 //relevancia
 );
 
 var banda5 = new banda(
 	"Angra",
 	"imagens/angra.jpg",
-	6,
-	10,
-	7
+	6, //peso
+	10, //técnica
+	7, //velocidade
+	7 //relevancia
+);
+
+var banda6 = new banda(
+	"Sarcófago",
+	"imagens/sarcofago.jpg",
+	9, //peso
+	4, //técnica
+	8, //velocidade
+	9 //relevancia
+);
+
+var banda7 = new banda(
+	"Torture Squad",
+	"imagens/torture-squad.jpg",
+	8, //peso
+	7, //técnica
+	7, //velocidade
+	6 //relevancia
 );
 
 // Para adicionar nova banda:
-// Crie nova variável com nome bandaN logo acima
-// Neste variável defina nome, imagem e atributos
-// Certifique-se de ter na pasta imagens a imagem referente à banda adicionada
-// Adicione à variável no array bandas logo abaixo
+// Crie nova variável com nome bandaN logo acima;
+// Neste variável defina nome, imagem e atributos;
+// Certifique-se de ter na pasta imagens a imagem referente à banda adicionada;
+// Adicione à variável no array bandas logo abaixo;
+// Adicione case no switch da function exibirOpcoes(banda);
 
-var bandas = [banda1, banda2, banda3, banda4, banda5];
+var bandas = [banda1, banda2, banda3, banda4, banda5, banda6, banda7];
 
 // Fim da declaração de bandas
 
@@ -149,6 +174,14 @@ function exibirOpcoes(banda) {
 			break;
 		case "Angra":
 			cartaBanda += `<img src="${banda5.imagem}">${divAtributos}</div>`;
+			opcoes.innerHTML += cartaBanda;
+			break;
+		case "Sarcófago":
+			cartaBanda += `<img src="${banda6.imagem}">${divAtributos}</div>`;
+			opcoes.innerHTML += cartaBanda;
+			break;
+		case "Torture Squad":
+			cartaBanda += `<img src="${banda7.imagem}">${divAtributos}</div>`;
 			opcoes.innerHTML += cartaBanda;
 			break;
 	}

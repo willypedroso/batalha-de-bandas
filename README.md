@@ -1,4 +1,4 @@
-# [BATALHA DE BANDAS :metal:](batalha-de-bandas.vercel.app)
+# [BATALHA DE BANDAS :metal:](https://batalha-de-bandas.vercel.app)
 
 Jogo single mode virtual de cartas estilo Super Trunfo.
 

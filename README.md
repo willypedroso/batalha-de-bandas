@@ -1,4 +1,4 @@
-# BATALHA DE BANDAS
+# [BATALHA DE BANDAS :metal:](batalha-de-bandas.vercel.app)
 
 Jogo single mode virtual de cartas estilo Super Trunfo.
 
@@ -6,7 +6,7 @@ Desenvolvido para passar o tédio dos Headbangers brasileiros e ajudar os inicia
 
 ***
 
-### Os atributos das bandas no jogo **não são absolutos** e foram definidos com base em **pura opinião do desenvolvedor do jogo**.
+### Os atributos das bandas no jogo não são absolutos e foram definidos com base em pura opinião do desenvolvedor do jogo.
 
 ***
 

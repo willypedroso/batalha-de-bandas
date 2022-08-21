@@ -14,6 +14,8 @@ Sugestões de inclusão de bandas e alterações de atributos podem ser feitas a
 
 As sugestões ficarão sujeitas à avaliação por parte do desenvolvedor para possíveis implementações.
 
+### Não serão aceitos Pull Requests
+
 ___
 
 Projeto baseado em [Guerra dos Velocistas](https://codepen.io/sergiojunior13/pen/MWoXowW) de [Sérgio Júnior](https://codepen.io/sergiojunior13).
